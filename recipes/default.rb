@@ -10,14 +10,14 @@
 include_recipe "apache2"
 #include_recipe "mysql::client"
 
-directory "#{node['sylius']['apache2']['path']}" do
+directory node['sylius']['apache2']['path'] do
   mode 00755
   action :create
 end
 
 
-web_app "#{node['sylius']['apache2']['server_name']}" do
+web_app node['sylius']['apache2']['server_name'] do
   template 'app.conf.erb'
   docroot node['sylius']['apache2']['docroot']
-  server_name "#{node['sylius']['apache2']['server_name']}"
+  server_name node['sylius']['apache2']['server_name']
 end
