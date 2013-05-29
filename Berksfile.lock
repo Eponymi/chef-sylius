@@ -1,0 +1,1 @@
+cookbook 'sylius', :path => '/Users/eponymi/Work/chef-repo/cookbooks/sylius'
