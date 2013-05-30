@@ -1,7 +1,7 @@
 # sylius cookbook
 Use this cookbook to quickly get up and running with a Sylius development environment.
 
-Master branch: [![Build Status](https://travis-ci.org/eponymi/chef-sylius.png?branch=master)](https://travis-ci.org/eponymi/chef-sylius)
+Master branch: [![Build Status](https://travis-ci.org/Eponymi/chef-sylius.png)](https://travis-ci.org/Eponymi/chef-sylius)
 
 # Requirements
   - Ruby (either the version in `.ruby-version` or with `rbenv` or `rvm` installed)

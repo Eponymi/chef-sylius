@@ -8,4 +8,4 @@ Berkshelf.ui.mute!
 berks = Berkshelf::Berksfile.from_file(File.join(TOPDIR, 'Berksfile'))
 berks.install(path: 'vendor/cookbooks')
  
-ChefSpec::ChefRunner.new(cookbook_path: 'vendor/cookbooks')
+#ChefSpec::ChefRunner.new(cookbook_path: 'vendor/cookbooks')

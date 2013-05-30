@@ -2,7 +2,10 @@
 
 require 'rake/testtask'
 
-task :default => 'foodcritic'
+task :default => 'tests'
+
+desc "Run all of the tests"
+task :tests => ["knife", "foodcritic"]
 
 desc "Runs foodcritic linter"
 task :foodcritic do
@@ -22,8 +25,12 @@ task :knife do
   sh "bundle exec knife cookbook test cookbook -c test/.chef/knife.rb -o #{sandbox_path}/../"
 end
 
-desc "Run all of the tests"
-task :tests => ["knife", "foodcritic"]
+desc "Runs chefspec tests"
+task :knife do
+  Rake::Task[:prepare_sandbox].execute
+
+  sh "bundle exec knife cookbook test cookbook -c test/.chef/knife.rb -o #{sandbox_path}/../"
+end
 
 task :prepare_sandbox do
   files = %w{*.md *.rb attributes definitions files libraries providers recipes resources templates}

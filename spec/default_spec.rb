@@ -31,9 +31,8 @@ describe 'sylius::default' do
     expect(chef_run).to create_file "#{chef_run.node['apache']['dir']}/sites-available/#{application_name}.conf"
   end
   
-=begin
   it "starts php" do
     expect(chef_run).to start_service 'php'
   end
-=end
+  
 end
